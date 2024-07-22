@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #5308a9; /* Dark blue background */
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    height: 60px; /* Increased height */
+    position: relative; /* Position relative to contain absolute elements */
+}
+
+.navbar .site-title {
+    color: #ffffff;
+    font-size: 33px; /* Larger font size for title */
+    font-weight: bold;
+    /* position: absolute; Fix title in place */
+    left: 30px; /* Align title to the left */
+    top: 50%; /* Center title vertically */
+    transform: translateY(-10%); /* Adjust vertical alignment */
+    margin-right: 100px;
+}
+
+.navbar .nav-links {
+    margin-left: auto; /* Push links to the right */
+    display: flex;
+}
+
+.navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 20px; /* Increased padding */
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #5908b5; /* Darker blue on hover */
+    color: #ffffff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #5308a9; /* Dark blue for headings */
+}
+
+p {
+    color: #333333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #5308a9; /* Dark blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: dotted;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+input[type="submit"] {
+    background-color: #5308a9; /* Matching the navbar color */
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #5908b5; /* Darker blue on hover */
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>Login Ops User</title>
+</head>
+<body>
+    <h2>Login Ops User</h2>
+    <form method="post" action="{% url 'login_ops' %}">
+        {% csrf_token %}
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html> {% endcomment %}
+
+
+{% block content %}
+<h2>Login Ops User</h2>
+<form method="post" action="{% url 'login_ops' %}">
+    {% csrf_token %}
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <input type="submit" value="Login">
+</form>
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+{% endblock %}

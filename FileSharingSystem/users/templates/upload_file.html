@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+</head>
+<body>
+    <h2>Upload File</h2>
+    <form method="post" action="{% url 'upload_file' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="file">Select file:</label><br>
+        <input type="file" id="file" name="file"><br><br>
+        <input type="submit" value="Upload">
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html> {% endcomment %}
+
+
+{% block content %}
+<h2>Upload File</h2>
+<form method="post" action="{% url 'upload_file' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file">Select file:</label><br>
+    <input type="file" id="file" name="file"><br><br>
+    <input type="submit" value="Upload">
+</form>
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+{% endblock %}

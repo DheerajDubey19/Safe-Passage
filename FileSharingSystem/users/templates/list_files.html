@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>List Files</title>
+</head>
+<body>
+    <h2>List of Uploaded Files</h2>
+    <ul>
+        {% for file in files %}
+             <li>{{ file.file.name }} - <a href="{% url 'generate_download_link' file.id %}">Get Download Link</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html> {% endcomment %}
+
+
+{% block content %}
+<h2>List of Uploaded Files</h2>
+<ul>
+    {% for file in files %}
+         <li>{{ file.file.name }} - <a href="{% url 'generate_download_link' file.id %}">Get Download Link</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
