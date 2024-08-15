@@ -1,0 +1,13 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+<h1>Welcome to Safe Passage</h1>
+        <p>Safe Passage is a secure file-sharing platform designed to make sharing files easy and safe. Whether you're an operations user or a client, you can trust Safe Passage to keep your files secure and accessible only to those who need them.</p>
+        <p>Our platform provides a range of features to manage your files, including:</p>
+        <ul>
+            <li>Uploading and sharing files securely</li>
+            <li>Generating secure download links</li>
+            <li>Viewing and managing your uploaded files</li>
+        </ul>
+        <p>To get started, <a href="{% url 'signup_ops' %}">sign up</a> or <a href="{% url 'login_ops' %}">log in</a> to your account. If you have any questions or need help, feel free to <a href="mailto:support@safe-passage.com">contact us</a>.</p>
+{% endblock %}

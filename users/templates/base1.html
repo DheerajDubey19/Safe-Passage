@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Safe Passage</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <span class="site-title">Safe Passage</span>
+        <a href="{% url 'home' %}">Home</a>
+        {% if user.is_authenticated %}
+            {% if user.user_type == 'ops' %}
+                <a href="{% url 'upload_file' %}">Upload File</a>
+            {% elif user.user_type == 'client' %}
+                <a href="{% url 'list_files' %}">List Files</a>
+            {% endif %}
+            <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'signup_ops' %}">Signup Ops</a>
+            <a href="{% url 'signup_client' %}">Signup Client</a>
+            <a href="{% url 'login_ops' %}">Login Ops</a>
+            <a href="{% url 'login_client' %}">Login Client</a>
+        {% endif %}
+    </div>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
