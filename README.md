@@ -57,7 +57,7 @@ This project implements a secure file-sharing system using Django and PostgreSQL
     
 
 ### Project Structure
-plaintext
+
 FileSharingSystem/                 
 ├── manage.py                
 ├── FileSharingSystem/       
@@ -65,8 +65,7 @@ FileSharingSystem/
 │   ├── settings.py          
 │   ├── urls.py              
 │   ├── wsgi.py              
-│   ├── asgi.py              
-│   └── ...
+│   └── asgi.py              
 ├── users/                   
 │   ├── __init__.py
 │   ├── middleware.py
@@ -87,8 +86,7 @@ FileSharingSystem/
 │   ├── static/               
 │   │   ├── style.css
 │   └── tests/
-│       ├── test_views.py
-│       └── ...
+│       └── test_views.py        
 ├── files/                   
 │   ├── __init__.py
 │   ├── models.py            
@@ -96,9 +94,8 @@ FileSharingSystem/
 │   ├── serializers.py       
 │   ├── urls.py
 │   └── tests/
-│       ├── test_views.py
-│       └── ...
-└── ...
+│       └── test_views.py
+
 
 
 
