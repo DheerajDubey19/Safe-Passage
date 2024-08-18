@@ -74,17 +74,7 @@ FileSharingSystem/
 │   ├── serializers.py       
 │   ├── urls.py
 │   ├── templates/               
-│   │   ├── base1.html
-│   │   ├── download_link.html
-│   │   ├── home.html
-│   │   ├── list_files.html
-│   │   ├── login_client.html
-│   │   ├── login_ops.html
-│   │   ├── signup_client.html
-│   │   ├── signup_ops.html
-│   │   ├── upload_file.html
 │   ├── static/               
-│   │   ├── style.css
 │   └── tests/
 │       └── test_views.py        
 ├── files/                   
